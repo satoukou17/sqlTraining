@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>WHERE句</title>
+  <link rel="stylesheet" href="../../../css/style.css">
+</head>
+<body>
+
+<nav>
+  <a href="../../../index.html">🏠 ホーム</a> >
+  <a href="../index.html">基礎編</a> >
+  <a href="index.html">基本構文</a>
+</nav>
+
+<h1>WHERE句</h1>
+
+<p>
+WHERE句は、データを条件で絞り込むための構文です。
+</p>
+
+<hr>
+
+<h2>📌 まずは復習（SELECT + FROM）</h2>
+
+<pre>
+SELECT name, age
+FROM users;
+</pre>
+
+<p>
+→ 全てのデータを取得する
+</p>
+
+<hr>
+
+<h2>📌 WHEREを使うと？</h2>
+
+<pre>
+SELECT name, age
+FROM users
+WHERE age >= 20;
+</pre>
+
+<p>
+→ ageが20以上のデータだけ取得する
+</p>
+
+<hr>
+
+<h2>💡 ポイント</h2>
+
+<ul>
+  <li>WHERE句に条件を書く</li>
+  <li>比較演算子（=, >=, <= など）を使用する</li>
+  <li>ANDやORを使って複数条件も指定できる</li>
+</ul>
+
+<hr>
+
+<h2>📝 問題①（基礎）</h2>
+
+<p>
+usersテーブルから「ageが30以上」のデータを取得するSQLを書いてみましょう。
+</p>
+
+<details>
+  <summary>答えを見る</summary>
+
+<pre>
+SELECT name, age
+FROM users
+WHERE age >= 30;
+</pre>
+
+</details>
+
+<hr>
+
+<h2>📝 問題②（応用）</h2>
+
+<p>
+usersテーブルから「ageが20以上かつ30以下」のデータを取得するSQLは？
+</p>
+
+<details>
+  <summary>答えを見る</summary>
+
+<pre>
+SELECT name, age
+FROM users
+WHERE age >= 20
+AND age <= 30;
+</pre>
+
+</details>
+
+<hr>
+
+<div class="page-nav">
+  <a href="select.html">← SELECTに戻る</a>
+  |
+  <a href="index.html">📘 基本構文一覧へ</a>
+  |
+  <a href="orderby.html">➡ 次へ（ORDER BY）</a>
+</div>
+
+</body>
+</html>

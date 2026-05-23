@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>関数</title>
+  <link rel="stylesheet" href="../../../css/style.css">
+</head>
+<body>
+
+<nav>
+  <a href="../../../index.html">🏠 ホーム</a> >
+  <a href="../index.html">基礎編</a> >
+  <a href="index.html">基本構文</a>
+</nav>
+
+<h1>関数</h1>
+
+<p>
+SQLでは、データの集計や計算を行うための関数を使用できます。
+</p>
+
+<hr>
+
+<h2>📌 COUNT関数</h2>
+
+<pre>
+SELECT COUNT(*)
+FROM users;
+</pre>
+
+<p>
+→ レコード数を取得する
+</p>
+
+<hr>
+
+<h2>📌 SUM関数</h2>
+
+<pre>
+SELECT SUM(price)
+FROM products;
+</pre>
+
+<p>
+→ priceの合計値を取得する
+</p>
+
+<hr>
+
+<h2>📌 AVG関数</h2>
+
+<pre>
+SELECT AVG(age)
+FROM users;
+</pre>
+
+<p>
+→ ageの平均値を取得する
+</p>
+
+<hr>
+
+<h2>📌 MAX関数</h2>
+
+<pre>
+SELECT MAX(age)
+FROM users;
+</pre>
+
+<p>
+→ ageの最大値を取得する
+</p>
+
+<hr>
+
+<h2>📌 MIN関数</h2>
+
+<pre>
+SELECT MIN(age)
+FROM users;
+</pre>
+
+<p>
+→ ageの最小値を取得する
+</p>
+
+<hr>
+
+<h2>💡 ポイント</h2>
+
+<ul>
+  <li>関数はSELECT句でよく使用される</li>
+  <li>GROUP BYと組み合わせることが多い</li>
+  <li>集計処理で頻繁に使用される</li>
+</ul>
+
+<hr>
+
+<h2>📝 問題①（基礎）</h2>
+
+<p>
+productsテーブルのprice合計を取得するSQLを書いてみましょう。
+</p>
+
+<details>
+  <summary>答えを見る</summary>
+
+<pre>
+SELECT SUM(price)
+FROM products;
+</pre>
+
+</details>
+
+<hr>
+
+<h2>📝 問題②（応用）</h2>
+
+<p>
+usersテーブルのdepartmentごとの平均年齢を取得するSQLを書いてみましょう。
+</p>
+
+<details>
+  <summary>答えを見る</summary>
+
+<pre>
+SELECT department, AVG(age)
+FROM users
+GROUP BY department;
+</pre>
+
+</details>
+
+<hr>
+
+<div class="page-nav">
+  <a href="distinct.html">← DISTINCTに戻る</a>
+  |
+  <a href="index.html">📘 基本構文一覧へ</a>
+  |
+  <a href="comparison.html">➡ 次へ（比較演算子）</a>
+</div>
+
+</body>
+</html>
