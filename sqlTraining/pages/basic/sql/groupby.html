@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>GROUP BY句</title>
+  <link rel="stylesheet" href="../../../css/style.css">
+</head>
+<body>
+
+<nav>
+  <a href="../../../index.html">🏠 ホーム</a> >
+  <a href="../index.html">基礎編</a> >
+  <a href="index.html">基本構文</a>
+</nav>
+
+<h1>GROUP BY句</h1>
+
+<p>
+GROUP BY句は、同じ値ごとにデータをグループ化するための構文です。
+</p>
+
+<hr>
+
+<h2>📌 GROUP BYを使わない場合</h2>
+
+<pre>
+SELECT department
+FROM users;
+</pre>
+
+<p>
+→ 同じ部署名が重複して表示される
+</p>
+
+<hr>
+
+<h2>📌 GROUP BYを使うと？</h2>
+
+<pre>
+SELECT department
+FROM users
+GROUP BY department;
+</pre>
+
+<p>
+→ departmentごとにグループ化される
+</p>
+
+<hr>
+
+<h2>📌 COUNT関数と組み合わせる</h2>
+
+<pre>
+SELECT department, COUNT(*)
+FROM users
+GROUP BY department;
+</pre>
+
+<p>
+→ 部署ごとの人数を取得できる
+</p>
+
+<hr>
+
+<h2>💡 ポイント</h2>
+
+<ul>
+  <li>GROUP BYの後にグループ化したい列を書く</li>
+  <li>COUNTやSUMなどの関数とよく組み合わせる</li>
+  <li>集計処理でよく使われる</li>
+</ul>
+
+<hr>
+
+<h2>📝 問題①（基礎）</h2>
+
+<p>
+usersテーブルをdepartmentごとにグループ化するSQLを書いてみましょう。
+</p>
+
+<details>
+  <summary>答えを見る</summary>
+
+<pre>
+SELECT department
+FROM users
+GROUP BY department;
+</pre>
+
+</details>
+
+<hr>
+
+<h2>📝 問題②（応用）</h2>
+
+<p>
+部署ごとの人数を取得するSQLを書いてみましょう。
+</p>
+
+<details>
+  <summary>答えを見る</summary>
+
+<pre>
+SELECT department, COUNT(*)
+FROM users
+GROUP BY department;
+</pre>
+
+</details>
+
+<hr>
+
+<div class="page-nav">
+  <a href="orderby.html">← ORDER BYに戻る</a>
+  |
+  <a href="index.html">📘 基本構文一覧へ</a>
+  |
+  <a href="having.html">➡ 次へ（HAVING）</a>
+</div>
+
+</body>
+</html>

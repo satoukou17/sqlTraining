@@ -1,0 +1,90 @@
+/* =========================
+   共通レイアウト
+========================= */
+
+body {
+  font-family: sans-serif;
+  max-width: 900px;
+  margin: auto;
+  padding: 30px;
+  line-height: 1.6;
+  background-color: #fafafa;
+}
+
+/* =========================
+   見出し
+========================= */
+
+h1 {
+  color: #333;
+}
+
+/* =========================
+   コード表示
+========================= */
+
+pre {
+  background: #272822;
+  color: #f8f8f2;
+  padding: 15px;
+  border-radius: 8px;
+  overflow-x: auto;
+}
+
+/* =========================
+   ナビゲーション
+========================= */
+
+nav {
+  margin-bottom: 20px;
+}
+
+/* =========================
+   リンク
+========================= */
+
+a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* =========================
+   detailsタグ
+========================= */
+
+details {
+  margin-top: 10px;
+}
+
+/* =========================
+   テーブル
+========================= */
+
+table {
+  border-collapse: collapse;
+  margin-top: 10px;
+  width: 100%;
+  background-color: white;
+}
+
+th,
+td {
+  border: 1px solid #ccc;
+  padding: 8px 12px;
+}
+
+th {
+  background-color: #f0f0f0;
+}
+
+/* =========================
+   ページ下部ナビ
+========================= */
+
+.page-nav {
+  margin-top: 30px;
+}

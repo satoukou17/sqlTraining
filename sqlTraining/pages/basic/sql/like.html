@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>LIKE句</title>
+  <link rel="stylesheet" href="../../../css/style.css">
+</head>
+<body>
+
+<nav>
+  <a href="../../../index.html">🏠 ホーム</a> >
+  <a href="../index.html">基礎編</a> >
+  <a href="index.html">基本構文</a>
+</nav>
+
+<h1>LIKE句</h1>
+
+<p>
+LIKE句は、文字列をあいまい検索するための構文です。
+</p>
+
+<hr>
+
+<h2>📌 LIKEを使わない場合</h2>
+
+<pre>
+SELECT name
+FROM users
+WHERE name = '田中';
+</pre>
+
+<p>
+→ 「田中」と完全一致するデータだけ取得する
+</p>
+
+<hr>
+
+<h2>📌 LIKEを使うと？</h2>
+
+<pre>
+SELECT name
+FROM users
+WHERE name LIKE '%田%';
+</pre>
+
+<p>
+→ 「田」を含むデータを取得する
+</p>
+
+<hr>
+
+<h2>📌 ワイルドカード</h2>
+
+<ul>
+  <li>% ：0文字以上の任意の文字列</li>
+  <li>_ ：任意の1文字</li>
+</ul>
+
+<hr>
+
+<h2>📌 LIKEの例</h2>
+
+<pre>
+-- 「田」で始まる
+LIKE '田%'
+
+-- 「田」で終わる
+LIKE '%田'
+
+-- 「田」を含む
+LIKE '%田%'
+</pre>
+
+<hr>
+
+<h2>💡 ポイント</h2>
+
+<ul>
+  <li>LIKEはWHERE句と一緒によく使う</li>
+  <li>文字列検索で頻繁に使用される</li>
+  <li>%を使うと部分一致検索ができる</li>
+</ul>
+
+<hr>
+
+<h2>📝 問題①（基礎）</h2>
+
+<p>
+usersテーブルから「山」を含むnameを取得するSQLを書いてみましょう。
+</p>
+
+<details>
+  <summary>答えを見る</summary>
+
+<pre>
+SELECT name
+FROM users
+WHERE name LIKE '%山%';
+</pre>
+
+</details>
+
+<hr>
+
+<h2>📝 問題②（応用）</h2>
+
+<p>
+usersテーブルから「田」で始まるnameを取得するSQLを書いてみましょう。
+</p>
+
+<details>
+  <summary>答えを見る</summary>
+
+<pre>
+SELECT name
+FROM users
+WHERE name LIKE '田%';
+</pre>
+
+</details>
+
+<hr>
+
+<div class="page-nav">
+  <a href="having.html">← HAVINGに戻る</a>
+  |
+  <a href="index.html">📘 基本構文一覧へ</a>
+  |
+  <a href="between.html">➡ 次へ（BETWEEN）</a>
+</div>
+
+</body>
+</html>

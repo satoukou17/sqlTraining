@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>INSERT文</title>
+  <link rel="stylesheet" href="../../../css/style.css">
+</head>
+<body>
+
+<nav>
+  <a href="../../../index.html">🏠 ホーム</a> >
+  <a href="../index.html">基礎編</a> >
+  <a href="index.html">基本構文</a>
+</nav>
+
+<h1>INSERT文</h1>
+
+<p>
+INSERT文は、テーブルに新しいデータを追加するための構文です。
+</p>
+
+<hr>
+
+<h2>📌 INSERT文の基本構文</h2>
+
+<pre>
+INSERT INTO users (name, age)
+VALUES ('田中', 25);
+</pre>
+
+<p>
+→ usersテーブルにデータを追加する
+</p>
+
+<hr>
+
+<h2>📌 実行後のイメージ</h2>
+
+<table>
+  <tr>
+    <th>name</th>
+    <th>age</th>
+  </tr>
+  <tr>
+    <td>田中</td>
+    <td>25</td>
+  </tr>
+</table>
+
+<hr>
+
+<h2>💡 ポイント</h2>
+
+<ul>
+  <li>INSERT INTO の後にテーブル名を書く</li>
+  <li>VALUES に追加する値を書く</li>
+  <li>列名と値の順番を合わせる</li>
+</ul>
+
+<hr>
+
+<h2>📝 問題①（基礎）</h2>
+
+<p>
+usersテーブルに「佐藤, 30」を追加するSQLを書いてみましょう。
+</p>
+
+<details>
+  <summary>答えを見る</summary>
+
+<pre>
+INSERT INTO users (name, age)
+VALUES ('佐藤', 30);
+</pre>
+
+</details>
+
+<hr>
+
+<h2>📝 問題②（応用）</h2>
+
+<p>
+productsテーブルに「PC, 120000」を追加するSQLを書いてみましょう。
+</p>
+
+<details>
+  <summary>答えを見る</summary>
+
+<pre>
+INSERT INTO products (product_name, price)
+VALUES ('PC', 120000);
+</pre>
+
+</details>
+
+<hr>
+
+<div class="page-nav">
+  <a href="logical.html">← 論理演算子に戻る</a>
+  |
+  <a href="index.html">📘 基本構文一覧へ</a>
+  |
+  <a href="update.html">➡ 次へ（UPDATE）</a>
+</div>
+
+</body>
+</html>

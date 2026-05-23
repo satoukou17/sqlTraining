@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>UPDATE文</title>
+  <link rel="stylesheet" href="../../../css/style.css">
+</head>
+<body>
+
+<nav>
+  <a href="../../../index.html">🏠 ホーム</a> >
+  <a href="../index.html">基礎編</a> >
+  <a href="index.html">基本構文</a>
+</nav>
+
+<h1>UPDATE文</h1>
+
+<p>
+UPDATE文は、既存のデータを更新するための構文です。
+</p>
+
+<hr>
+
+<h2>📌 UPDATE文の基本構文</h2>
+
+<pre>
+UPDATE users
+SET age = 30
+WHERE name = '田中';
+</pre>
+
+<p>
+→ 「田中」のageを30に更新する
+</p>
+
+<hr>
+
+<h2>📌 実行前のイメージ</h2>
+
+<table>
+  <tr>
+    <th>name</th>
+    <th>age</th>
+  </tr>
+  <tr>
+    <td>田中</td>
+    <td>25</td>
+  </tr>
+</table>
+
+<hr>
+
+<h2>📌 実行後のイメージ</h2>
+
+<table>
+  <tr>
+    <th>name</th>
+    <th>age</th>
+  </tr>
+  <tr>
+    <td>田中</td>
+    <td>30</td>
+  </tr>
+</table>
+
+<hr>
+
+<h2>💡 ポイント</h2>
+
+<ul>
+  <li>UPDATEの後に更新対象のテーブルを書く</li>
+  <li>SETで更新内容を指定する</li>
+  <li>WHERE句を書かないと全件更新されるので注意</li>
+</ul>
+
+<hr>
+
+<h2>📝 問題①（基礎）</h2>
+
+<p>
+usersテーブルの「佐藤」のageを35に更新するSQLを書いてみましょう。
+</p>
+
+<details>
+  <summary>答えを見る</summary>
+
+<pre>
+UPDATE users
+SET age = 35
+WHERE name = '佐藤';
+</pre>
+
+</details>
+
+<hr>
+
+<h2>📝 問題②（応用）</h2>
+
+<p>
+productsテーブルの「PC」のpriceを150000に更新するSQLを書いてみましょう。
+</p>
+
+<details>
+  <summary>答えを見る</summary>
+
+<pre>
+UPDATE products
+SET price = 150000
+WHERE product_name = 'PC';
+</pre>
+
+</details>
+
+<hr>
+
+<div class="page-nav">
+  <a href="insert.html">← INSERTに戻る</a>
+  |
+  <a href="index.html">📘 基本構文一覧へ</a>
+  |
+  <a href="delete.html">➡ 次へ（DELETE）</a>
+</div>
+
+</body>
+</html>
